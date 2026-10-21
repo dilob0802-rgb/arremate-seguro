@@ -206,7 +206,11 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: 78px;
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+  gap: 20px;
 }
 
 .brand-logo {
@@ -214,6 +218,7 @@ button {
   align-items: center;
   gap: 12px;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .brand-icon-wrapper {
@@ -227,6 +232,7 @@ button {
   justify-content: center;
   color: var(--gold-400);
   box-shadow: 0 4px 12px var(--gold-glow);
+  flex-shrink: 0;
 }
 
 .brand-text-group {
@@ -241,6 +247,7 @@ button {
   letter-spacing: 0.05em;
   color: var(--text-primary);
   line-height: 1.1;
+  white-space: nowrap;
 }
 
 .brand-subtitle {
@@ -249,21 +256,28 @@ button {
   letter-spacing: 0.1em;
   color: var(--gold-400);
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 22px;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 1;
 }
 
 .nav-link {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 600;
   color: var(--text-secondary);
   transition: var(--transition-smooth);
   position: relative;
+  white-space: nowrap;
+  padding: 6px 0;
+  display: inline-block;
 }
 
 .nav-link:hover {
@@ -288,7 +302,8 @@ button {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
+  flex-shrink: 0;
 }
 
 /* Botões Estilizados */
@@ -304,6 +319,12 @@ button {
   border-radius: var(--radius-sm);
   transition: var(--transition-smooth);
   text-align: center;
+  white-space: nowrap;
+}
+
+.btn-sm {
+  padding: 10px 18px;
+  font-size: 0.86rem;
   white-space: nowrap;
 }
 
@@ -360,14 +381,30 @@ button {
   display: none;
   font-size: 1.5rem;
   color: var(--text-primary);
+  padding: 4px 8px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1040px) {
   .nav-menu {
     display: none;
   }
   .mobile-toggle {
     display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-btn-whatsapp span {
+    display: none;
+  }
+  .nav-btn-whatsapp {
+    padding: 10px 12px;
+  }
+  .brand-title {
+    font-size: 1rem;
+  }
+  .brand-subtitle {
+    font-size: 0.62rem;
   }
 }
 
