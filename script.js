@@ -156,29 +156,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const navMenu = document.querySelector('.nav-menu');
 
   if (mobileToggleBtn && navMenu) {
-    mobileToggleBtn.addEventListener('click', () => {
-      const isVisible = navMenu.style.display === 'flex';
-      navMenu.style.display = isVisible ? 'none' : 'flex';
-      if (!isVisible) {
-        navMenu.style.flexDirection = 'column';
-        navMenu.style.position = 'absolute';
-        navMenu.style.top = '80px';
-        navMenu.style.left = '0';
-        navMenu.style.width = '100%';
-        navMenu.style.background = '#0a0d14';
-        navMenu.style.padding = '24px';
-        navMenu.style.borderBottom = '1px solid var(--border-gold)';
-        navMenu.style.boxShadow = '0 10px 30px rgba(0,0,0,0.8)';
-      }
+    mobileToggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navMenu.classList.toggle('active');
     });
 
     // Fechar ao clicar em qualquer link
     navMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        if (window.innerWidth <= 900) {
-          navMenu.style.display = 'none';
-        }
+        navMenu.classList.remove('active');
       });
+    });
+
+    // Fechar ao clicar fora do menu
+    document.addEventListener('click', (e) => {
+      if (!navMenu.contains(e.target) && !mobileToggleBtn.contains(e.target)) {
+        navMenu.classList.remove('active');
+      }
     });
   }
 

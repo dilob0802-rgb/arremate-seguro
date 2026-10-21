@@ -66,11 +66,15 @@ html {
   color: var(--text-primary);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
   min-height: 100vh;
+  max-width: 100%;
   overflow-x: hidden;
+  position: relative;
   background: 
     radial-gradient(circle at 15% 10%, rgba(229, 169, 60, 0.08) 0%, transparent 40%),
     radial-gradient(circle at 85% 35%, rgba(16, 185, 129, 0.04) 0%, transparent 45%),
@@ -384,27 +388,121 @@ button {
   padding: 4px 8px;
 }
 
+.nav-cta-text-short {
+  display: none;
+}
+
 @media (max-width: 1040px) {
   .nav-menu {
     display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 13, 20, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 24px 20px;
+    border-bottom: 1px solid var(--border-gold);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.85);
+    gap: 16px;
+    z-index: 999;
+  }
+  .nav-menu.active {
+    display: flex;
+  }
+  .nav-menu .nav-link {
+    font-size: 1.05rem;
+    padding: 10px 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
   .mobile-toggle {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
-@media (max-width: 600px) {
-  .nav-btn-whatsapp span {
+@media (max-width: 768px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .nav-container {
+    height: 68px;
+    gap: 8px;
+  }
+
+  .brand-logo {
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .brand-icon-wrapper {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+  }
+
+  .brand-icon-wrapper svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .brand-title {
+    font-size: 0.95rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.6rem;
+  }
+
+  /* Oculta botão do WhatsApp do topo no celular para não estourar a tela */
+  .nav-btn-whatsapp {
+    display: none !important;
+  }
+
+  .nav-actions {
+    gap: 8px;
+  }
+
+  .nav-cta-text-full {
     display: none;
   }
-  .nav-btn-whatsapp {
-    padding: 10px 12px;
+
+  .nav-cta-text-short {
+    display: inline;
   }
+
+  .btn-sm {
+    padding: 8px 13px;
+    font-size: 0.8rem;
+  }
+
+  .mobile-toggle {
+    width: 36px;
+    height: 36px;
+    font-size: 1.25rem;
+    padding: 0;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-subtle);
+  }
+}
+
+@media (max-width: 380px) {
   .brand-title {
-    font-size: 1rem;
+    font-size: 0.88rem;
   }
   .brand-subtitle {
-    font-size: 0.62rem;
+    font-size: 0.55rem;
+  }
+  .btn-sm {
+    padding: 7px 10px;
+    font-size: 0.76rem;
   }
 }
 
@@ -550,7 +648,7 @@ button {
 @media (max-width: 900px) {
   .hero-section {
     min-height: auto;
-    padding: 56px 0 72px 0;
+    padding: 36px 0 54px 0;
   }
   .hero-bg-image {
     object-position: 70% center;
@@ -558,30 +656,57 @@ button {
   .hero-overlay {
     background: linear-gradient(
       180deg, 
-      rgba(10, 13, 20, 0.93) 0%, 
-      rgba(10, 13, 20, 0.80) 45%, 
+      rgba(10, 13, 20, 0.92) 0%, 
+      rgba(10, 13, 20, 0.78) 45%, 
       rgba(10, 13, 20, 0.92) 80%,
       rgba(10, 13, 20, 1) 100%
     );
   }
   .hero-title {
-    font-size: 2.2rem;
+    font-size: 1.95rem;
     line-height: 1.22;
+    word-break: break-word;
+    margin-bottom: 18px;
   }
   .hero-description {
-    font-size: 0.96rem;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+  .hero-bullets {
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+  .hero-bullet-item {
+    font-size: 0.9rem;
+    gap: 10px;
   }
   .hero-cta-group {
     flex-direction: column;
     align-items: stretch;
+    width: 100%;
+    gap: 12px;
   }
   .hero-cta-group .btn {
     width: 100%;
   }
   .hero-location-tag {
     position: static;
-    margin-top: 32px;
+    margin-top: 24px;
     text-align: right;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.75rem;
+    line-height: 1.24;
+  }
+  .eyebrow {
+    font-size: 0.68rem;
+    padding: 5px 10px;
+    margin-bottom: 12px;
+    letter-spacing: 0.08em;
   }
 }
 
