@@ -1,0 +1,16 @@
+# Dependências e caches
+node_modules/
+.DS_Store
+Thumbs.db
+
+# Arquivos e scripts temporários de extração
+extracted_site/
+cookies.txt
+*.log
+extract.js
+analyze_assets.js
+extract_text.js
+filter_phrases.js
+format_code.js
+parse_details.js
+parse_all_sections.js
