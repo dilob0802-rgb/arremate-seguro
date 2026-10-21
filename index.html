@@ -103,43 +103,60 @@
   </header>
 
   <!-- ==========================================================================
-       HERO SECTION
+       HERO SECTION (Fundo Panorâmico com Degradê Cinematográfico)
        ========================================================================== -->
   <section class="hero-section" id="hero">
-    <div class="container hero-grid">
-      
-      <!-- Lado Esquerdo: Conteúdo Textual -->
+    <!-- Foto oficial do Rio de Janeiro como plano de fundo -->
+    <img src="assets/rio-condominio.jpg" 
+         alt="Imagem ilustrativa de condomínio residencial com paisagem do Rio de Janeiro" 
+         class="hero-bg-image"
+         fetchpriority="high"
+         loading="eager">
+    
+    <!-- Camadas de degradê: lateral e inferior -->
+    <div class="hero-overlay"></div>
+    <div class="hero-bottom-fade"></div>
+
+    <div class="container hero-container">
       <div class="hero-content">
         <div class="eyebrow">
           <span class="eyebrow-dot"></span>
-          <span>IMÓVEIS DE LEILÃO DA CAIXA • RIO DE JANEIRO</span>
+          <span>IMÓVEIS DE LEILÃO DA CAIXA</span>
         </div>
 
         <h1 class="hero-title">
-          Aprenda a arrematar imóveis de leilão da Caixa com <span class="text-gold-gradient">até 50% de desconto</span> sobre o valor de mercado.
+          Aprenda a <span class="hero-title-highlight">arrematar imóveis de leilão da Caixa</span> com até 50% de desconto sobre o valor de mercado.
         </h1>
 
         <p class="hero-description">
-          Com <strong>Tarcis Riccioni</strong>, vou te ensinar a encontrar oportunidades, analisar os riscos e calcular se um imóvel realmente vale a pena — <strong>do mesmo jeito que eu fiz nas minhas arrematações</strong>.
+          Em <strong>4 encontros práticos no mês</strong>, vou te ensinar a encontrar oportunidades, analisar os riscos e calcular se um imóvel realmente vale a pena — <strong>do mesmo jeito que eu fiz nas minhas arrematações</strong>.
         </p>
 
         <!-- Bullet Points de Autoridade e Vantagens -->
         <ul class="hero-bullets">
           <li class="hero-bullet-item">
-            <span class="hero-bullet-icon">✓</span>
+            <svg class="hero-bullet-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
             <span>Venda Online e Venda Direta da Caixa.</span>
           </li>
           <li class="hero-bullet-item">
-            <span class="hero-bullet-icon">✓</span>
+            <svg class="hero-bullet-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
             <span>Use seu FGTS + possível entrada de apenas 5%.</span>
           </li>
           <li class="hero-bullet-item">
-            <span class="hero-bullet-icon">✓</span>
-            <span>Análise de mercado e viabilidade financeira rigorosa.</span>
+            <svg class="hero-bullet-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span>Análise de mercado e viabilidade financeira.</span>
           </li>
           <li class="hero-bullet-item">
-            <span class="hero-bullet-icon">✓</span>
-            <span>Acompanhamento prático diretamente comigo.</span>
+            <svg class="hero-bullet-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span>Acompanhamento prático comigo.</span>
           </li>
         </ul>
 
@@ -162,47 +179,18 @@
           </div>
           <p class="hero-disclaimer">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
             </svg>
-            Aprenda a tomar decisões com mais informação antes de comprometer seu dinheiro.
+            <span>Aprenda a tomar decisões com mais informação antes de comprometer seu dinheiro.</span>
           </p>
         </div>
       </div>
 
-      <!-- Lado Direito: Imagem Oficial com Badges de Destaque -->
-      <div class="hero-visual-wrapper">
-        <div class="hero-visual-card">
-          <img src="assets/rio-condominio.jpg" 
-               alt="Condomínio residencial com vista privilegiada no Rio de Janeiro" 
-               class="hero-img"
-               loading="eager"
-               fetchpriority="high">
-          
-          <div class="hero-img-overlay">
-            <div class="hero-tag">
-              <span>📍 Oportunidade Real no Rio de Janeiro</span>
-            </div>
-            <h2 class="hero-card-title">Leilões Caixa Econômica Federal</h2>
-            <p class="hero-card-subtitle">Venda Online • Venda Direta • Financiamento Facilitado</p>
-            
-            <div class="hero-metrics-pill">
-              <div class="hero-metric-item">
-                <span class="hero-metric-label">Desconto Médio</span>
-                <span class="hero-metric-value highlight">Até 50%</span>
-              </div>
-              <div class="hero-metric-item">
-                <span class="hero-metric-label">Entrada Mínima</span>
-                <span class="hero-metric-value">A partir de 5%</span>
-              </div>
-              <div class="hero-metric-item">
-                <span class="hero-metric-label">FGTS</span>
-                <span class="hero-metric-value">Aceito Caixa</span>
-              </div>
-            </div>
-          </div>
-        </div>
+      <!-- Legenda no canto direito da imagem de fundo -->
+      <div class="hero-location-tag">
+        Imagem ilustrativa
       </div>
-
     </div>
   </section>
 
