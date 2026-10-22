@@ -48,60 +48,91 @@
     @media(max-width:700px){.hero{min-height:0}.hero-grid{min-height:590px}.hero-content{width:100%;max-width:520px;padding:54px 0 250px}.hero-visual:after{background:linear-gradient(180deg,rgba(247,246,242,.98) 0%,rgba(247,246,242,.94) 43%,rgba(247,246,242,.28) 70%,rgba(23,45,41,.2) 100%)}.hero-visual img{object-position:60% center}.hero-analysis{top:auto;bottom:20px;right:20px;transform:none;width:220px}.journeys-layout{grid-template-columns:1fr;gap:22px}.journey-cards{grid-template-columns:1fr}.journey-card{grid-template-columns:.8fr 1.2fr}.journey-photo{min-height:180px}.program-list{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:25px}.program-list:before{display:none}.program-row{padding:8px 8px 0 0}.simulator-layout{grid-template-columns:1fr;gap:23px}.simulator-intro{grid-column:auto}.sim-fields{grid-template-columns:1fr 1fr;gap:18px;padding:0;border:0}.sim-results{padding:22px}}
     .top-announcement{background:#182e29;color:#e9eee9;padding:9px 0;font-size:11px;border-bottom:1px solid rgba(179,145,85,.35);text-align:center}
     .top-announcement-inner{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
-    .top-tag{background:#b39155;color:#182e29;font:700 9px var(--display);padding:2px 8px;border-radius:2px;letter-spacing:.08em;text-transform:uppercase}
-    .top-announcement del{color:#a4b4ab;margin:0 3px}
+    .top-tag{background:#b39155;color:#182e29;font:800 9px var(--display);padding:3px 9px;border-radius:2px;letter-spacing:.08em;text-transform:uppercase}
+    .top-price-badge{background:#b39155;color:#182e29;font:800 11px var(--display);padding:2px 8px;border-radius:2px;letter-spacing:.02em;margin-left:2px}
+    .top-announcement del{color:#ff9182;margin:0 3px;font-weight:600}
     .top-announcement strong{color:#fff}
-    .top-announcement a{color:#d6be8c;font-weight:700;text-decoration:underline;text-underline-offset:2px}
+    .top-announcement a{color:#f3dfb2;font-weight:700;text-decoration:underline;text-underline-offset:2px}
     .top-announcement a:hover{color:#fff}
-    .hero-batch-pill{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.95);border:1px solid #d5dbd3;padding:6px 14px;border-radius:2px;font-size:11px;color:#2c3e37;margin-bottom:14px;box-shadow:0 2px 8px rgba(23,45,41,.06)}
-    .hero-batch-pill .dot{width:7px;height:7px;border-radius:50%;background:#b39155}
-    .hero-batch-pill del{color:var(--muted);margin:0 2px}
-    .hero-batch-pill strong{color:var(--green);font-weight:700}
-    .close{background:#1a352f;color:#fff;padding:85px 0}
+    
+    /* Box de Oferta no Hero em Grande Evidência */
+    .hero-offer-box{background:#fff;border:1.5px solid #b39155;border-radius:3px;padding:14px 18px;margin-bottom:20px;box-shadow:0 10px 28px rgba(23,45,41,.1);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .hero-offer-box .badge{display:inline-flex;align-items:center;gap:6px;font:800 9px var(--display);color:#8a744a;letter-spacing:.09em;text-transform:uppercase}
+    .hero-offer-box .badge-pulse{width:7px;height:7px;border-radius:50%;background:#234a40;display:inline-block}
+    .hero-offer-box .date{font-size:12px;color:#2c3e37;margin-top:3px}
+    .hero-offer-box .date strong{color:#172d29}
+    .hero-offer-box .pricing{display:flex;align-items:center;gap:12px;border-left:1px solid #e1ded6;padding-left:16px}
+    .hero-offer-box .from{font-size:11px;color:var(--muted);line-height:1.25}
+    .hero-offer-box .from del{color:#c94a38;font-weight:700;font-size:12px}
+    .hero-offer-box .to{font:500 34px/1 var(--serif);color:var(--green);display:flex;align-items:baseline}
+    .hero-offer-box .to em{font-style:normal;font-size:15px;color:#8a744a;margin-right:2px;font-weight:700}
+    .hero-offer-box .to small{font-size:15px;color:#8a744a;font-weight:700}
+    
+    /* Seção de Inscrição e Preço em Destaque */
+    .close{background:#182e29;color:#fff;padding:85px 0 110px}
     .close-card{max-width:820px;margin:0 auto;text-align:center}
-    .close-tag{display:inline-block;color:#c8ad79;font:700 10px var(--display);letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+    .close-tag{display:inline-block;background:#b39155;color:#182e29;font:800 10px var(--display);letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:2px;margin-bottom:16px}
     .close-card h2{font:500 clamp(34px,4.5vw,48px)/1.1 var(--serif);color:#fff;margin:0 0 16px}
     .close-date{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(179,145,85,.4);padding:8px 18px;border-radius:3px;font-size:13px;color:#f0f4f1;margin-bottom:24px}
     .close-pricing{margin:0 0 24px}
-    .close-old-price{font-size:13px;color:#a3b2a9;margin-bottom:4px}
-    .close-old-price del{color:#ff8a7a;font-weight:600}
-    .close-big-price{font:500 clamp(44px,6vw,62px)/1 var(--serif);color:#fff}
-    .close-big-price em{font-style:normal;color:#c8ad79;font-size:.55em;margin-right:4px}
-    .close-terms{font-size:11px;color:#abbbb2;margin-top:6px}
+    .close-old-price{font-size:14px;color:#a3b2a9;margin-bottom:4px}
+    .close-old-price del{color:#ff8a7a;font-weight:700;font-size:16px}
+    .close-big-price{font:500 clamp(54px,7.5vw,76px)/1 var(--serif);color:#fff;text-shadow:0 0 24px rgba(179,145,85,.35);margin:6px 0}
+    .close-big-price em{font-style:normal;color:#c8ad79;font-size:.45em;margin-right:4px}
+    .close-big-price small{font-size:.45em;color:#c8ad79}
+    .close-terms{font-size:12px;color:#cbd9cf;margin-top:6px;font-weight:500}
     .close-actions{display:flex;flex-direction:column;align-items:center;gap:14px}
-    .close-btn{min-height:52px;padding:0 34px;background:#b39155;color:#182e29;font:700 13px var(--display);letter-spacing:.02em;border-radius:3px;transition:background .2s;display:inline-flex;align-items:center;justify-content:center}
-    .close-btn:hover{background:#c8ad79;color:#182e29}
+    .close-btn{min-height:56px;padding:0 38px;background:#b39155;color:#182e29;font:800 14px var(--display);letter-spacing:.03em;border-radius:3px;box-shadow:0 6px 24px rgba(179,145,85,.4);transition:background .2s,transform .2s,box-shadow .2s;display:inline-flex;align-items:center;justify-content:center}
+    .close-btn:hover{background:#c8ad79;color:#182e29;transform:translateY(-2px);box-shadow:0 8px 30px rgba(179,145,85,.6)}
     .close-pills{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:14px;font-size:11px;color:#a3b5ab}
+
+    /* Barra Fixa Flutuante de Rodapé */
+    .sticky-offer-bar{position:fixed;bottom:0;left:0;right:0;background:rgba(24,46,41,.98);border-top:1.5px solid #b39155;backdrop-filter:blur(12px);padding:10px 20px;z-index:98;box-shadow:0 -8px 24px rgba(0,0,0,.35)}
+    .sticky-offer-inner{width:min(var(--max),calc(100% - 40px));margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .sticky-offer-info{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+    .sticky-offer-tag{background:#b39155;color:#182e29;font:800 9px var(--display);padding:3px 9px;border-radius:2px;text-transform:uppercase;letter-spacing:.08em}
+    .sticky-offer-text{color:#e4ece7;font-size:13px}
+    .sticky-offer-text del{color:#ff9182;margin:0 3px}
+    .sticky-offer-price{font:700 22px var(--serif);color:#f3dfb2}
+    .sticky-offer-btn{background:#b39155;color:#182e29!important;font:800 12px var(--display);padding:10px 22px;border-radius:2px;letter-spacing:.03em;transition:background .2s,transform .2s;white-space:nowrap;box-shadow:0 3px 12px rgba(179,145,85,.35)}
+    .sticky-offer-btn:hover{background:#c8ad79;transform:translateY(-1px);box-shadow:0 5px 16px rgba(179,145,85,.55)}
+    @media(max-width:768px){.sticky-offer-inner{justify-content:center;gap:8px;text-align:center}.sticky-offer-info{justify-content:center;font-size:11px}.sticky-offer-btn{width:100%;text-align:center}.hero-offer-box{flex-direction:column;align-items:flex-start;gap:10px}.hero-offer-box .pricing{border-left:0;padding-left:0;border-top:1px solid #e1ded6;padding-top:8px;width:100%;justify-content:space-between}}
   </style>
 </head>
 <body>
   <div class="top-announcement" role="region" aria-label="Aviso de turma">
     <div class="wrap top-announcement-inner">
-      <span class="top-tag">Turma Confirmada</span>
-      <span>1° encontro dia <strong>27/10 às 20horas</strong> (ao vivo)</span>
+      <span class="top-tag">🔥 Lote Promocional</span>
+      <span>1° encontro confirmado: <strong>27/10 às 20 horas</strong> (ao vivo)</span>
       <span>•</span>
-      <span>Condição especial: De <del>R$ 500,00</del> por apenas <strong>R$ 97,00</strong></span>
-      <a href="#inscricao">Garantir vaga &rarr;</a>
+      <span>De <del>R$ 500,00</del> por apenas <span class="top-price-badge">R$ 97,00</span></span>
+      <a href="#inscricao">Garantir vaga com 80% OFF &rarr;</a>
     </div>
   </div>
   <header class="topbar" id="top"><div class="wrap nav">
     <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">A</span><span>ARREMATE SEGURO</span></a>
     <nav class="links" id="siteNav" aria-label="Navegação principal"><a href="#publico">Para quem é</a><a href="#metodo">O método</a><a href="#programa">Programa</a><a href="#mentor">Mentor</a><a href="#duvidas">Dúvidas</a><a href="#inscricao" style="color:var(--green);font-weight:700;">Inscrição</a></nav>
-    <span class="nav-note">Análise cuidadosa.<br>Decisões mais conscientes.</span><a class="button nav-cta" href="#inscricao">Garantir vaga</a>
+    <span class="nav-note">Análise cuidadosa.<br>Decisões mais conscientes.</span><a class="button nav-cta" href="#inscricao" style="background:#b39155;color:#182e29;font-weight:800;border:0;">Garantir vaga • R$ 97</a>
     <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="siteNav">☰</button>
   </div></header>
   <main>
     <section class="hero"><div class="wrap hero-grid">
       <div class="hero-content">
-        <div class="hero-batch-pill">
-          <span class="dot" aria-hidden="true"></span>
-          <span>1° encontro dia <strong>27/10 às 20horas</strong> · De <del>R$ 500</del> por <strong>R$ 97,00</strong></span>
+        <div class="hero-offer-box">
+          <div>
+            <div class="badge"><span class="badge-pulse"></span>Lote Promocional • 80% OFF</div>
+            <div class="date">📅 1° encontro: <strong>27/10 às 20h</strong> (ao vivo)</div>
+          </div>
+          <div class="pricing">
+            <div class="from">De <del>R$ 500,00</del><br>por apenas:</div>
+            <div class="to"><em>R$</em>97<small>,00</small></div>
+          </div>
         </div>
         <div class="eyebrow">Mentoria em imóveis de leilão</div>
         <h1>Decidir com método muda <em>toda a compra.</em></h1>
         <p class="hero-copy">Para quem quer investir em imóveis de leilão ou comprar o primeiro imóvel: aprenda a avaliar oportunidades da Caixa, calcular custos e entender os riscos antes de fazer uma proposta.</p>
         <div class="hero-actions">
-          <a class="button" href="#inscricao">Garantir vaga por R$ 97,00</a>
+          <a class="button" href="#inscricao" style="background:#b39155;color:#182e29;font-weight:800;box-shadow:0 6px 20px rgba(179,145,85,.35);">Garantir vaga por R$ 97,00 &rarr;</a>
           <a class="button outline" href="#publico">Para quem é</a>
         </div>
         <p class="quiet">Conteúdo educacional. Cada imóvel exige análise própria; não há garantia de lucro.</p>
@@ -117,19 +148,19 @@
     <section class="content faq" id="duvidas"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Perguntas frequentes</div><h2>Informação clara antes de começar.</h2></div><p>Veja como funciona a mentoria e o que considerar ao avaliar um imóvel de leilão.</p></div><div class="faq-list"><details><summary>Preciso ter experiência com leilões?</summary><p>Não. A proposta é apresentar os conceitos fundamentais e conduzir o aluno até a análise prática de uma oportunidade.</p></details><details><summary>Quais imóveis são abordados?</summary><p>O foco está nas modalidades de venda de imóveis da Caixa, com ênfase no mercado do Rio de Janeiro.</p></details><details><summary>A mentoria garante lucro?</summary><p>Não. Investimentos imobiliários envolvem riscos e não há garantia de lucro. A mentoria ensina critérios de análise e não garante resultados.</p></details><details><summary>Como são os encontros?</summary><p>São quatro encontros online ao longo de um mês, com análise conjunta de editais e oportunidades. O 1° encontro desta turma já está confirmado para o dia 27/10 às 20 horas.</p></details><details><summary>Qual o investimento da mentoria?</summary><p>Nesta condição especial de lançamento da nova turma, o valor é de R$ 500,00 por apenas R$ 97,00 (no PIX ou parcelado no cartão). O 1° encontro será no dia 27/10 às 20 horas. As vagas são reduzidas para manter o acompanhamento individual.</p></details><details><summary>O que está incluído?</summary><p>Encontros práticos ao vivo, grupo exclusivo de alunos, 30 dias de suporte direto no WhatsApp e análise conjunta de oportunidades.</p></details></div></div></section>
     <section class="content close" id="inscricao">
       <div class="wrap close-card">
-        <span class="close-tag">Turma Confirmada • Vagas Reduzidas</span>
+        <span class="close-tag">🔥 80% OFF • LOTE PROMOCIONAL</span>
         <h2>Garanta sua vaga na mentoria Arremate Seguro</h2>
         <div class="close-date">
-          <span>📅 1° encontro marcado para <strong>27/10 às 20 horas</strong> (online ao vivo)</span>
+          <span>📅 1° encontro confirmado: <strong>27/10 às 20 horas</strong> (ao vivo)</span>
         </div>
         <div class="close-pricing">
           <div class="close-old-price">De <del>R$ 500,00</del> por apenas:</div>
-          <div class="close-big-price"><em>R$</em>97,00</div>
-          <div class="close-terms">Pagamento único no PIX ou parcelado no cartão de crédito</div>
+          <div class="close-big-price"><em>R$</em>97<small>,00</small></div>
+          <div class="close-terms">À vista no PIX ou em até 12x no cartão de crédito</div>
         </div>
         <div class="close-actions">
           <a class="close-btn" href="https://wa.me/5521986785306?text=Ol%C3%A1%2C%20Tarcis!%20Quero%20garantir%20minha%20vaga%20na%20mentoria%20Arremate%20Seguro%20por%20R%24%2097%2C00%20(1%C2%B0%20encontro%20dia%2027%2F10%20%C3%A0s%2020h)." target="_blank" rel="noopener noreferrer">
-            Garantir minha vaga por R$ 97,00 &rarr;
+            QUERO MINHA VAGA POR APENAS R$ 97,00 &rarr;
           </a>
           <div class="close-pills">
             <span>✓ 4 encontros práticos ao vivo</span>
@@ -141,6 +172,21 @@
     </section>
   </main>
   <footer class="footer"><div class="wrap"><div class="footer-row"><span>© <span id="year"></span> Arremate Seguro · Tarcis Riccioni</span><a href="https://www.instagram.com/arrematanteleilao/" target="_blank" rel="noopener noreferrer">Instagram @arrematanteleilao</a></div><p class="legal">A mentoria tem caráter educacional e é independente da Caixa Econômica Federal. A compra de imóveis em leilão envolve riscos jurídicos, de ocupação e de mercado. Valores e simulações são ilustrativos; cada oportunidade precisa ser analisada individualmente.</p></div></footer>
+
+  <!-- Barra Fixa Flutuante de Oferta no Rodapé -->
+  <div class="sticky-offer-bar" id="stickyOfferBar" role="region" aria-label="Oferta da próxima turma">
+    <div class="sticky-offer-inner">
+      <div class="sticky-offer-info">
+        <span class="sticky-offer-tag">🔥 Turma Confirmada</span>
+        <span class="sticky-offer-text">
+          1° encontro: <strong>27/10 às 20h</strong> • De <del>R$ 500,00</del> por apenas
+        </span>
+        <span class="sticky-offer-price">R$ 97,00</span>
+      </div>
+      <a href="#inscricao" class="sticky-offer-btn">Garantir Vaga por R$ 97 &rarr;</a>
+    </div>
+  </div>
+
   <script>
     const money=n=>new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL',maximumFractionDigits:0}).format(n||0);const simInputs=['simMarket','simBuy','simRenovation','simDebts'].map(id=>document.getElementById(id));function calculateSim(){const market=Math.max(0,Number(simInputs[0].value)||0),buy=Math.max(0,Number(simInputs[1].value)||0),reno=Math.max(0,Number(simInputs[2].value)||0),debts=Math.max(0,Number(simInputs[3].value)||0),transfer=buy*.045,sale=market*.05,total=buy+transfer+reno+debts,profit=market-total-sale,discount=market?((market-buy)/market)*100:0;document.getElementById('simProfit').textContent=money(profit);document.getElementById('simProfit').classList.toggle('negative',profit<0);const status=document.getElementById('simStatus');status.textContent=profit<0?'Resultado estimado negativo':'Margem estimada positiva';status.classList.toggle('negative',profit<0);document.getElementById('marketBarValue').textContent=money(market);document.getElementById('purchaseBarValue').textContent=money(buy);document.getElementById('purchaseBar').style.width=(market?Math.min(100,Math.max(0,buy/market*100)):0)+'%';document.getElementById('marketBar').style.width='100%';document.getElementById('simGapLabel').textContent=discount.toFixed(1).replace('.',',')+'% abaixo';document.getElementById('simDiscount').textContent=discount.toFixed(1).replace('.',',')+'%';document.getElementById('simTransfer').textContent=money(transfer);document.getElementById('simSale').textContent=money(sale);document.getElementById('simTotal').textContent=money(total);const message=encodeURIComponent(`Olá, Tarcis! Fiz uma simulação no site Arremate Seguro: mercado ${money(market)}, aquisição ${money(buy)}, reformas ${money(reno)}, débitos ${money(debts)} e resultado estimado ${money(profit)}. Gostaria de conversar sobre essa oportunidade.`);document.getElementById('simWhatsApp').href='https://wa.me/5521986785306?text='+message}const rangePairs=[['simMarket','rangeMarket'],['simBuy','rangeBuy'],['simRenovation','rangeRenovation'],['simDebts','rangeDebts']];rangePairs.forEach(([fieldId,rangeId])=>{const field=document.getElementById(fieldId),range=document.getElementById(rangeId);range.addEventListener('input',()=>{field.value=range.value;calculateSim()});field.addEventListener('input',()=>{range.value=field.value;calculateSim()})});calculateSim();
     const menuBtn=document.getElementById('menuBtn');const nav=document.getElementById('siteNav');menuBtn.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.setAttribute('aria-label',open?'Fechar menu':'Abrir menu')});nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.setAttribute('aria-label','Abrir menu')}));document.getElementById('year').textContent=new Date().getFullYear();

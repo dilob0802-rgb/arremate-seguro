@@ -1898,7 +1898,7 @@ input, select, textarea {
 /* 16. BOTÃO FLUTUANTE DE WHATSAPP DISCRETO */
 .floating-whatsapp-btn {
   position: fixed;
-  bottom: 26px;
+  bottom: 70px;
   right: 26px;
   z-index: 99;
   background: var(--whatsapp);
@@ -1947,8 +1947,8 @@ input, select, textarea {
     height: 54px;
     justify-content: center;
     border-radius: 50%;
-    bottom: 20px;
-    right: 20px;
+    bottom: 84px;
+    right: 18px;
   }
   .floating-whatsapp-dot {
     display: none;
@@ -2240,5 +2240,234 @@ input, select, textarea {
   .announcement-content {
     flex-direction: column;
     gap: 6px;
+  }
+}
+
+/* ==========================================================================
+   REALCE MÁXIMO DE PREÇO E EVIDÊNCIA DA OFERTA
+   ========================================================================== */
+.price-highlight {
+  display: inline-block;
+  background: var(--gold-500);
+  color: var(--navy-950) !important;
+  font-weight: 900;
+  padding: 2px 10px;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 0 14px rgba(198, 165, 106, 0.45);
+  margin-left: 4px;
+}
+
+/* Hero Spotlight de Oferta */
+.hero-offer-spotlight {
+  background: linear-gradient(135deg, rgba(20, 36, 59, 0.95) 0%, rgba(11, 20, 36, 0.98) 100%);
+  border: 1.5px solid var(--gold-500);
+  border-radius: var(--radius-lg);
+  padding: 16px 22px;
+  margin-bottom: 22px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 24px rgba(198, 165, 106, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.spotlight-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.spotlight-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--gold-400);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.spotlight-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 8px #10B981;
+  animation: pulse-dot 1.8s infinite;
+}
+
+.spotlight-date {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.9rem;
+  color: #F1F5F9;
+}
+
+.spotlight-date svg {
+  color: var(--gold-500);
+  flex-shrink: 0;
+}
+
+.spotlight-pricing {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-left: 1px solid rgba(198, 165, 106, 0.3);
+  padding-left: 18px;
+}
+
+.spotlight-from {
+  font-size: 0.82rem;
+  color: var(--text-secondary-dark);
+  line-height: 1.25;
+}
+
+.spotlight-from del {
+  color: #EF4444;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.spotlight-to {
+  display: flex;
+  align-items: baseline;
+  color: #FFFFFF;
+}
+
+.spotlight-to .curr {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gold-400);
+  margin-right: 2px;
+}
+
+.spotlight-to .amount {
+  font-size: 2.6rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  color: #FFFFFF;
+  line-height: 1;
+  text-shadow: 0 0 20px rgba(198, 165, 106, 0.4);
+}
+
+.spotlight-to .fraction {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gold-400);
+}
+
+/* Barra Fixa Flutuante de Oferta no Rodapé */
+.sticky-offer-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(11, 20, 36, 0.97);
+  border-top: 1.5px solid var(--gold-500);
+  backdrop-filter: blur(14px);
+  padding: 10px 20px;
+  z-index: 98;
+  box-shadow: 0 -8px 26px rgba(0, 0, 0, 0.45);
+}
+
+.sticky-offer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.sticky-offer-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.sticky-offer-tag {
+  background: var(--gold-500);
+  color: var(--navy-950);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.72rem;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sticky-offer-text {
+  color: #E2E8F0;
+  font-size: 0.9rem;
+}
+
+.sticky-offer-text strong {
+  color: #FFFFFF;
+}
+
+.sticky-offer-text del {
+  color: #EF4444;
+  margin: 0 4px;
+}
+
+.sticky-offer-price {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--gold-400);
+  font-family: var(--font-heading);
+  text-shadow: 0 0 12px rgba(198, 165, 106, 0.4);
+}
+
+.sticky-offer-btn {
+  background: linear-gradient(135deg, var(--gold-500) 0%, var(--gold-600) 100%);
+  color: var(--navy-950) !important;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.88rem;
+  padding: 9px 24px;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(198, 165, 106, 0.4);
+  white-space: nowrap;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.sticky-offer-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(198, 165, 106, 0.65);
+}
+
+@media (max-width: 768px) {
+  .hero-offer-spotlight {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .spotlight-pricing {
+    border-left: 0;
+    padding-left: 0;
+    border-top: 1px solid rgba(198, 165, 106, 0.25);
+    padding-top: 10px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .sticky-offer-inner {
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+  }
+  .sticky-offer-info {
+    justify-content: center;
+  }
+  .sticky-offer-btn {
+    width: 100%;
+    text-align: center;
   }
 }
