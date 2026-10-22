@@ -1954,3 +1954,291 @@ input, select, textarea {
     display: none;
   }
 }
+
+/* ==========================================================================
+   ELEMENTOS DE OFERTA E DATA DA PRÓXIMA TURMA
+   ========================================================================== */
+.batch-announcement-bar {
+  background: linear-gradient(90deg, #09121f 0%, #172b48 50%, #09121f 100%);
+  border-bottom: 1px solid var(--gold-border);
+  padding: 10px 0;
+  font-size: 0.88rem;
+  color: var(--white);
+  position: relative;
+  z-index: 101;
+}
+
+.announcement-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  text-align: center;
+}
+
+.announcement-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--gold-500);
+  color: var(--navy-950);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.72rem;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.announcement-text {
+  color: #E2E8F0;
+}
+
+.announcement-text strong {
+  color: #FFFFFF;
+}
+
+.announcement-text .old-price {
+  color: var(--text-secondary-dark);
+  text-decoration: line-through;
+  margin: 0 4px;
+}
+
+.announcement-text .new-price {
+  color: var(--gold-400);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.announcement-link {
+  color: var(--gold-400);
+  font-weight: 700;
+  font-size: 0.84rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+
+.announcement-link:hover {
+  color: #FFFFFF;
+}
+
+/* Badge no Hero */
+.hero-batch-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(198, 165, 106, 0.08);
+  border: 1px solid var(--gold-border);
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  margin-bottom: 22px;
+  backdrop-filter: blur(8px);
+  flex-wrap: wrap;
+}
+
+.hero-batch-badge .batch-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: #E2E8F0;
+}
+
+.hero-batch-badge .batch-date svg {
+  color: var(--gold-500);
+  flex-shrink: 0;
+}
+
+.hero-batch-badge .batch-price-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  border-left: 1px solid var(--gold-border);
+  padding-left: 14px;
+}
+
+.hero-batch-badge .price-from {
+  color: var(--text-secondary-dark);
+  text-decoration: line-through;
+  font-size: 0.8rem;
+}
+
+.hero-batch-badge .price-to {
+  color: var(--gold-400);
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+/* Card de Aviso no Programa */
+.batch-schedule-card {
+  margin-top: 36px;
+  background: var(--navy-850);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-md);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  text-align: center;
+  color: #E2E8F0;
+  font-size: 0.95rem;
+}
+
+.batch-schedule-card .schedule-pill {
+  background: var(--gold-subtle);
+  color: var(--gold-400);
+  border: 1px solid var(--gold-border);
+  font-weight: 700;
+  font-size: 0.78rem;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Card de Oferta na Conversão Final */
+.offer-box-container {
+  margin-top: 28px;
+  background: linear-gradient(180deg, rgba(20, 36, 59, 0.95) 0%, rgba(11, 20, 36, 0.98) 100%);
+  border: 1px solid var(--gold-500);
+  border-radius: var(--radius-lg);
+  padding: 34px 28px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), 0 0 24px rgba(198, 165, 106, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.offer-box-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold-500), transparent);
+}
+
+.offer-header-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gold-500);
+  color: var(--navy-950);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.75rem;
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.offer-date-highlight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #F8FAFC;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 22px;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.offer-date-highlight svg {
+  color: var(--gold-500);
+}
+
+.offer-pricing-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 22px;
+}
+
+.offer-pricing-old {
+  font-size: 0.98rem;
+  color: var(--text-secondary-dark);
+}
+
+.offer-pricing-old del {
+  color: #EF4444;
+  font-weight: 600;
+}
+
+.offer-pricing-main {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+  font-family: var(--font-heading);
+  color: #FFFFFF;
+}
+
+.offer-pricing-main .currency {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gold-400);
+}
+
+.offer-pricing-main .value {
+  font-size: 3.8rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #FFFFFF;
+  text-shadow: 0 4px 16px rgba(198, 165, 106, 0.3);
+}
+
+.offer-pricing-main .cents {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gold-400);
+}
+
+.offer-pricing-terms {
+  font-size: 0.85rem;
+  color: var(--text-secondary-dark);
+}
+
+.offer-cta-button {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .hero-batch-badge {
+    border-radius: var(--radius-md);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .hero-batch-badge .batch-price-tag {
+    border-left: 0;
+    padding-left: 0;
+    border-top: 1px solid var(--gold-border);
+    padding-top: 6px;
+    width: 100%;
+  }
+  .offer-box-container {
+    padding: 24px 16px;
+  }
+  .offer-pricing-main .value {
+    font-size: 3rem;
+  }
+  .announcement-content {
+    flex-direction: column;
+    gap: 6px;
+  }
+}

@@ -62,6 +62,18 @@
 </head>
 <body>
 
+  <!-- Barra de Aviso da Próxima Turma -->
+  <div class="batch-announcement-bar" role="region" aria-label="Aviso de nova turma">
+    <div class="container announcement-content">
+      <span class="announcement-badge">Turma Confirmada</span>
+      <span class="announcement-text">
+        <strong>1° encontro: dia 27/10 às 20 horas</strong> (ao vivo) • Condição especial: 
+        De <del class="old-price">R$ 500,00</del> por apenas <strong class="new-price">R$ 97,00</strong>
+      </span>
+      <a href="#conversao" class="announcement-link">Garantir vaga com desconto &rarr;</a>
+    </div>
+  </div>
+
   <!-- ==========================================================================
        HEADER E NAVEGAÇÃO
        ========================================================================== -->
@@ -129,6 +141,19 @@
           
           <!-- Coluna Esquerda: Proposta de Valor e Benefícios -->
           <div class="hero-content">
+            
+            <!-- Badge de Próxima Turma e Condição Especial -->
+            <div class="hero-batch-badge">
+              <div class="batch-date">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                <span>1° encontro dia <strong>27/10 às 20 horas</strong></span>
+              </div>
+              <div class="batch-price-tag">
+                <span class="price-from">De R$ 500,00</span>
+                <span class="price-to">por R$ 97,00</span>
+              </div>
+            </div>
+
             <div class="eyebrow">
               <span class="eyebrow-dot" aria-hidden="true"></span>
               <span>MENTORIA EM IMÓVEIS DE LEILÃO</span>
@@ -166,13 +191,11 @@
 
             <!-- Botões de Ação do Hero -->
             <div class="hero-actions">
-              <a href="https://wa.me/5521986785306?text=Ol%C3%A1%2C%20Tarcis!%20Quero%20conhecer%20a%20mentoria%20Arremate%20Seguro%20e%20saber%20mais%20sobre%20as%20pr%C3%B3ximas%20turmas." 
-                 target="_blank" 
-                 rel="noopener noreferrer" 
+              <a href="#conversao" 
                  class="btn btn-primary btn-lg" 
                  id="heroPrimaryCta"
                  data-track="cta-hero-primary">
-                Quero conhecer a mentoria
+                Garantir vaga por R$ 97,00
               </a>
 
               <a href="#simulador" class="btn btn-secondary btn-lg" id="heroSecondaryCta">
@@ -572,6 +595,12 @@
 
         </div>
 
+        <!-- Card de Aviso com a Data Confirmada da Turma -->
+        <div class="batch-schedule-card">
+          <span class="schedule-pill">Cronograma Confirmado</span>
+          <span>O <strong>1° encontro será no dia 27/10 às 20 horas</strong>, 100% online e ao vivo com Tarcis Riccioni.</span>
+        </div>
+
       </div>
     </section>
 
@@ -870,19 +899,39 @@
             </div>
           </div>
 
-          <div class="conversion-actions">
-            <a href="https://wa.me/5521986785306?text=Ol%C3%A1%2C%20Tarcis!%20Quero%20conversar%20sobre%20a%20mentoria%20Arremate%20Seguro%20e%20saber%20sobre%20as%20condi%C3%A7%C3%B5es%20de%20participa%C3%A7%C3%A3o." 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="btn btn-primary btn-lg" 
-               id="conversionCtaBtn"
-               data-track="cta-final-conversao">
-              Quero conversar sobre a mentoria
-            </a>
+          <!-- Bloco Oficial da Oferta e Inscrição -->
+          <div class="offer-box-container">
+            <span class="offer-header-tag">Condição Exclusiva • Turma Confirmada</span>
 
-            <p class="conversion-note">
-              Valores, datas, disponibilidade e condições de participação serão informados antes da inscrição.
-            </p>
+            <div class="offer-date-highlight">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <span>1° encontro marcado para <strong>27/10 às 20 horas</strong> (online ao vivo)</span>
+            </div>
+
+            <div class="offer-pricing-row">
+              <span class="offer-pricing-old">De <del>R$ 500,00</del> por apenas:</span>
+              <div class="offer-pricing-main">
+                <span class="currency">R$</span>
+                <span class="value">97</span>
+                <span class="cents">,00</span>
+              </div>
+              <span class="offer-pricing-terms">Pagamento único no PIX ou parcelado no cartão de crédito</span>
+            </div>
+
+            <div class="conversion-actions">
+              <a href="https://wa.me/5521986785306?text=Ol%C3%A1%2C%20Tarcis!%20Quero%20garantir%20minha%20vaga%20na%20mentoria%20Arremate%20Seguro%20por%20R%24%2097%2C00%20para%20o%201%C2%B0%20encontro%20do%20dia%2027%2F10%20%C3%A0s%2020h." 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="btn btn-primary btn-lg offer-cta-button" 
+                 id="conversionCtaBtn"
+                 data-track="cta-final-conversao">
+                Garantir minha vaga por R$ 97,00
+              </a>
+
+              <p class="conversion-note">
+                ✓ Acesso aos 4 encontros ao vivo &nbsp;•&nbsp; ✓ 30 dias de suporte direto no WhatsApp &nbsp;•&nbsp; ✓ Vagas limitadas para acompanhamento individual
+              </p>
+            </div>
           </div>
 
         </div>
@@ -1025,7 +1074,7 @@
             </button>
             <div class="faq-body">
               <div class="faq-answer">
-                São quatro encontros práticos distribuídos ao longo de um mês, realizados de forma online, com exposição direta do método e espaço para análise conjunta de editais e oportunidades reais.
+                São quatro encontros práticos distribuídos ao longo de um mês, realizados de forma online, com exposição direta do método e espaço para análise conjunta de editais e oportunidades reais. O <strong>1° encontro desta turma está confirmado para o dia 27/10 às 20 horas</strong>.
               </div>
             </div>
           </div>
@@ -1048,14 +1097,14 @@
           <!-- Pergunta 10 -->
           <div class="faq-item">
             <button class="faq-trigger" type="button" aria-expanded="false">
-              <span class="faq-question">Quanto custa a mentoria e como consultar as próximas turmas?</span>
+              <span class="faq-question">Quanto custa a mentoria e como garantir a vaga na próxima turma?</span>
               <div class="faq-icon-indicator" aria-hidden="true">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
               </div>
             </button>
             <div class="faq-body">
               <div class="faq-answer">
-                Para manter a qualidade e o acompanhamento próximo de cada participante, as turmas são reduzidas. Valores, datas de início e disponibilidade de vagas são informados diretamente pelo WhatsApp antes de qualquer formalização.
+                Nesta turma com 1° encontro confirmado para <strong>27/10 às 20 horas</strong>, disponibilizamos uma condição promocional especial: <strong>de R$ 500,00 por apenas R$ 97,00</strong> (à vista no PIX ou parcelado no cartão). Para assegurar a qualidade e o acompanhamento próximo de cada aluno, as vagas são estritamente limitadas.
               </div>
             </div>
           </div>
