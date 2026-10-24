@@ -1947,7 +1947,7 @@ input, select, textarea {
     height: 54px;
     justify-content: center;
     border-radius: 50%;
-    bottom: 84px;
+    bottom: 20px;
     right: 18px;
   }
   .floating-whatsapp-dot {
@@ -2458,16 +2458,8 @@ input, select, textarea {
     width: 100%;
     justify-content: space-between;
   }
-  .sticky-offer-inner {
-    justify-content: center;
-    gap: 8px;
-    text-align: center;
-  }
-  .sticky-offer-info {
-    justify-content: center;
-  }
-  .sticky-offer-btn {
-    width: 100%;
-    text-align: center;
+  /* Oculta a barra fixa no celular para desobstruir a tela e garantir leitura fluida */
+  .sticky-offer-bar {
+    display: none !important;
   }
 }
