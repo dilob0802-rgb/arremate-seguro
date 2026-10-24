@@ -98,7 +98,6 @@
       <nav aria-label="Navegação Principal" class="main-navigation">
         <ul class="nav-menu" id="navMenu">
           <li><a href="#metodo" class="nav-link">Método</a></li>
-          <li><a href="#simulador" class="nav-link">Simulador</a></li>
           <li><a href="#programa" class="nav-link">Programa</a></li>
           <li><a href="#incluso" class="nav-link">O que Inclui</a></li>
           <li><a href="#mentor" class="nav-link">Mentor</a></li>
@@ -208,8 +207,8 @@
                 Garantir vaga por R$ 97,00
               </a>
 
-              <a href="#simulador" class="btn btn-secondary btn-lg" id="heroSecondaryCta">
-                Explorar o simulador
+              <a href="#metodo" class="btn btn-secondary btn-lg" id="heroSecondaryCta">
+                Conhecer o método
               </a>
             </div>
 
@@ -336,163 +335,7 @@
       </div>
     </section>
 
-    <!-- ==========================================================================
-         SIMULADOR FINANCEIRO INTERATIVO DE VIABILIDADE
-         ========================================================================== -->
-    <section class="section-padding simulator-section" id="simulador">
-      <div class="container">
-        
-        <div class="section-header">
-          <div class="eyebrow">
-            <span class="eyebrow-dot" aria-hidden="true"></span>
-            <span>SIMULADOR DE VIABILIDADE</span>
-          </div>
-          <h2 class="section-title">
-            Calcule os custos reais antes de tomar qualquer decisão.
-          </h2>
-          <p class="section-subtitle">
-            Ajuste os valores estimados para simular a viabilidade financeira de uma operação, considerando despesas cartorárias, reformas e débitos previstos.
-          </p>
-        </div>
 
-        <div class="calc-container-box">
-          <div class="calc-grid">
-            
-            <!-- Coluna de Parâmetros e Entradas -->
-            <div class="calc-inputs-wrapper">
-              
-              <div class="calc-block-header">
-                <h3 class="calc-block-title">Parâmetros da Operação</h3>
-              </div>
-
-              <!-- 1. Valor Estimado de Mercado -->
-              <div class="calc-input-group">
-                <div class="calc-label-row">
-                  <label for="marketPriceInput" class="calc-label">1. Valor Estimado de Mercado</label>
-                  <input type="text" id="marketPriceDisplay" class="calc-input-number" value="R$ 380.000" aria-label="Valor de mercado em Reais">
-                </div>
-                <input type="range" id="marketPriceInput" class="calc-slider" min="100000" max="1500000" step="10000" value="380000" aria-label="Controle deslizante de valor de mercado">
-              </div>
-
-              <!-- 2. Valor de Aquisição ou Lance Proposto -->
-              <div class="calc-input-group">
-                <div class="calc-label-row">
-                  <label for="auctionPriceInput" class="calc-label">2. Valor de Aquisição / Lance Proposto</label>
-                  <input type="text" id="auctionPriceDisplay" class="calc-input-number" value="R$ 210.000" aria-label="Valor de aquisição em Reais">
-                </div>
-                <input type="range" id="auctionPriceInput" class="calc-slider" min="50000" max="1200000" step="5000" value="210000" aria-label="Controle deslizante de valor de lance">
-              </div>
-
-              <!-- Grid com Custos Operacionais Complementares -->
-              <div class="calc-inputs-grid-2cols">
-                
-                <!-- 3. ITBI e Cartório (~4,5%) -->
-                <div class="calc-input-group">
-                  <div class="calc-label-row">
-                    <label for="itbiDisplay" class="calc-label">ITBI & Cartório (RGI)</label>
-                    <input type="text" id="itbiDisplay" class="calc-input-number" value="R$ 9.450" readonly aria-label="ITBI e Cartório estimado">
-                  </div>
-                  <span style="font-size: 0.74rem; color: var(--text-muted-dark);">Calculado automaticamente (~4,5% sobre aquisição)</span>
-                </div>
-
-                <!-- 4. Reforma e Manutenção -->
-                <div class="calc-input-group">
-                  <div class="calc-label-row">
-                    <label for="renovationInput" class="calc-label">Reforma e Manutenção</label>
-                    <input type="text" id="renovationDisplay" class="calc-input-number" value="R$ 18.000" aria-label="Custo de reforma em Reais">
-                  </div>
-                  <input type="range" id="renovationInput" class="calc-slider" min="0" max="100000" step="2500" value="18000" aria-label="Controle deslizante de reforma">
-                </div>
-
-                <!-- 5. Débitos (Condomínio / IPTU em atraso) -->
-                <div class="calc-input-group">
-                  <div class="calc-label-row">
-                    <label for="debtsInput" class="calc-label">Débitos de Condomínio / IPTU</label>
-                    <input type="text" id="debtsDisplay" class="calc-input-number" value="R$ 6.200" aria-label="Débitos em Reais">
-                  </div>
-                  <input type="range" id="debtsInput" class="calc-slider" min="0" max="60000" step="1000" value="6200" aria-label="Controle deslizante de débitos">
-                </div>
-
-                <!-- 6. Despesas de Venda / Corretagem (5%) -->
-                <div class="calc-input-group">
-                  <div class="calc-label-row">
-                    <label for="sellingExpensesDisplay" class="calc-label">Despesas de Venda (5%)</label>
-                    <input type="text" id="sellingExpensesDisplay" class="calc-input-number" value="R$ 19.000" readonly aria-label="Despesas de venda estimadas">
-                  </div>
-                  <span style="font-size: 0.74rem; color: var(--text-muted-dark);">Corretagem e marketing na revenda (~5% do mercado)</span>
-                </div>
-
-              </div>
-
-            </div>
-
-            <!-- Coluna de Resultados / Ficha Técnica Financeira -->
-            <div class="calc-results-panel">
-              <div class="calc-results-header">
-                <span class="calc-results-title">Ficha Técnica da Simulação</span>
-                <span class="calc-badge-status" id="calcStatusBadge">Operação Viável</span>
-              </div>
-
-              <!-- Resultado Principal -->
-              <div class="calc-main-result-box">
-                <div class="calc-main-result-label">Resultado Líquido Estimado</div>
-                <div class="calc-main-result-value" id="calcNetProfitDisplay">R$ 117.350</div>
-              </div>
-
-              <!-- Alerta de Resultado Negativo (Condicional) -->
-              <div class="calc-negative-alert-box" id="calcNegativeAlert">
-                <strong>Atenção à Margem de Segurança:</strong> Com os valores informados, o custo total somado às despesas operacionais supera o valor estimado de mercado. Operação com risco de prejuízo financeiro.
-              </div>
-
-              <!-- Tabela Detalhada de Métricas da Operação -->
-              <div class="calc-metrics-table">
-                <div class="calc-metric-row">
-                  <span class="calc-metric-name">Desconto em relação ao Mercado:</span>
-                  <span class="calc-metric-data gold" id="calcDiscountDisplay">44,7% de desconto</span>
-                </div>
-                <div class="calc-metric-row">
-                  <span class="calc-metric-name">Diferença Bruta (Mercado − Aquisição):</span>
-                  <span class="calc-metric-data" id="calcGrossDiffDisplay">R$ 170.000</span>
-                </div>
-                <div class="calc-metric-row">
-                  <span class="calc-metric-name">Custo Total Consolidado da Operação:</span>
-                  <span class="calc-metric-data" id="calcTotalCostDisplay">R$ 243.650</span>
-                </div>
-                <div class="calc-metric-row">
-                  <span class="calc-metric-name">Margem Estimada sobre o Custo:</span>
-                  <span class="calc-metric-data" id="calcMarginDisplay">48,2%</span>
-                </div>
-                <div class="calc-metric-row">
-                  <span class="calc-metric-name">Entrada Mínima Caixa (5% na modalidade):</span>
-                  <span class="calc-metric-data" id="calcMinEntryDisplay">R$ 10.500</span>
-                </div>
-              </div>
-
-              <!-- Aviso Obrigatório de Simulação Ilustrativa -->
-              <div class="calc-disclaimer-box">
-                * Simulação ilustrativa, baseada nos valores informados. Os custos efetivos, a tributação e o resultado dependem das características do imóvel e da operação. A valorização ou venda pelo valor estimado não é garantida.
-              </div>
-
-              <!-- Botão de Ação do Simulador com Envio Contextualizado -->
-              <a href="https://wa.me/5521986785306" 
-                 target="_blank" 
-                 rel="noopener noreferrer" 
-                 class="btn btn-primary btn-calc-cta" 
-                 id="calcWhatsappBtn"
-                 data-track="cta-simulador">
-                <span>Quero analisar uma oportunidade com orientação</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-                  <path d="M5 12h14m-7-7 7 7-7 7"/>
-                </svg>
-              </a>
-
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
 
     <!-- ==========================================================================
          SEÇÃO "COMO FUNCIONA A MENTORIA" (LINHA DO TEMPO EM 4 ETAPAS)
@@ -1158,7 +1001,6 @@
           <h4 class="footer-col-title">Navegação</h4>
           <ul class="footer-links-list">
             <li class="footer-link-item"><a href="#metodo">Método e Margem</a></li>
-            <li class="footer-link-item"><a href="#simulador">Simulador Financeiro</a></li>
             <li class="footer-link-item"><a href="#programa">Programa (4 Encontros)</a></li>
             <li class="footer-link-item"><a href="#incluso">O que está Incluído</a></li>
             <li class="footer-link-item"><a href="#mentor">Sobre o Mentor</a></li>
