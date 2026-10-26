@@ -1,0 +1,13 @@
+# Ignorar scripts auxiliares e servidor local para a Vercel servir como Site Estático puro
+server.js
+local-server.js
+analyze_assets.js
+extract.js
+extract_text.js
+filter_phrases.js
+format_code.js
+parse_all_sections.js
+parse_details.js
+cookies.txt
+extracted_site
+*.log

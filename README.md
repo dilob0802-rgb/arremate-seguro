@@ -11,7 +11,7 @@ O projeto foi construído utilizando tecnologias nativas e ultravelozes (HTML5 S
 
 ### Opção 1: Servidor Nativo Node.js (Já configurado)
 ```bash
-node server.js
+node local-server.js
 ```
 Acesse no seu navegador: **[http://localhost:3000](http://localhost:3000)**
 
